@@ -1,20 +1,8 @@
 balance=0
-Q1_AMOUNT=100
-Q2_AMOUNT=200
-Q3_AMOUNT=300
-Q4_AMOUNT=400
-Q5_AMOUNT=500
-Q6_AMOUNT=1000
-Q7_AMOUNT=2000
-Q8_AMOUNT=4000
-Q9_AMOUNT=8000
-Q10_AMOUNT=16000
-Q11_AMOUNT=32000
-Q12_AMOUNT=64000
-Q13_AMOUNT=125000
-Q14_AMOUNT=250000
-Q15_AMOUNT=500000
-Q16_AMOUNT=1000000
+QUESTIONS=["What is the capital of the UAE?","How many emirates are there in the UAE?"]
+OPTIONS=[["Abu Dhabi","Dubai","Sharjah","RAK"],["3","5","7","8"]]
+ANSWERS=[0,2]
+AMOUNTS=[100,200,300,400,500,1000,2000,4000,8000,16000,32000,64000,125000,250000,500000,1000000]
 
 
 
@@ -32,6 +20,20 @@ elif whattodo=="4":
     print("You will take me with you, right? Enjoy anyways")
 else:
     print("You might think it's safe to do that, but with inflation, you will lose the value of the money!")
-
+for index in range(len(QUESTIONS)):
+    question=QUESTIONS[index]
+    print(question)
+    options=OPTIONS[index]
+    print("1: ",options[0])
+    print("2: ",options[1])
+    print("3: ",options[2])
+    print("4: ",options[3])
+    answer=int(input("What is your answer: 1-4?"))-1
+    if answer==ANSWERS[index]:
+        print("Excellent job!")
+        print("You won",AMOUNTS[index]," AED")
+    else:
+        print("Sorry ! Wrong answer")
+        break
 
 
