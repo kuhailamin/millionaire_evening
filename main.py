@@ -1,39 +1,56 @@
-balance=0
-QUESTIONS=["What is the capital of the UAE?","How many emirates are there in the UAE?"]
-OPTIONS=[["Abu Dhabi","Dubai","Sharjah","RAK"],["3","5","7","8"]]
-ANSWERS=[0,2]
+import random
+from playsound import playsound
+QUESTIONS=[]
+handle = open("Question_backup.txt", "r")
+for line in handle:
+    info=line.split(",")
+    question={
+        "question":info[0],
+        "options":[info[1],info[2],info[3],info[4]],
+        "answer":int(info[5])
+    }
+    QUESTIONS.append(question)
+
+# close hello.txt
+handle.close( )
+
 AMOUNTS=[100,200,300,400,500,1000,2000,4000,8000,16000,32000,64000,125000,250000,500000,1000000]
 
 
-
-print("Welcome to our show: Who wants to be a millionare?")
-name=input("May I know your name?")
-print("Nice to meet you, "+name+"!")
-whattodo=input("What will you do when you win the 1,000,000 AED? 1:Invest it, 2:Buy 1M meals, and feed the hungry, 3: Buy a fancy car, 4: Travel the world, 5: Keep it in the bank")
-if whattodo=="1":
-    print("Wow! Nice option! Make sure you diversify your investment")
-elif whattodo=="2":
-    print("Mashallah! God bless you! What a kind act")
-elif whattodo=="3":
-    print("Enjoy! But you can probably find something as fancy with less money")
-elif whattodo=="4":
-    print("You will take me with you, right? Enjoy anyways")
-else:
-    print("You might think it's safe to do that, but with inflation, you will lose the value of the money!")
-for index in range(len(QUESTIONS)):
-    question=QUESTIONS[index]
-    print(question)
-    options=OPTIONS[index]
-    print("1: ",options[0])
-    print("2: ",options[1])
-    print("3: ",options[2])
-    print("4: ",options[3])
-    answer=int(input("What is your answer: 1-4?"))-1
-    if answer==ANSWERS[index]:
-        print("Excellent job!")
-        print("You won",AMOUNTS[index]," AED")
+print("I'm George Gherdahi. Welcome to Who Wants to Be a Millionare.")
+name=input("Introduce yourself to the audience")
+print("Welcome "+name+" to the show! We are excited to have you!")
+answer=input("So, tell us. What will you do if you win the million dirhams? 1: Invest it, 2: Buy one million meals and feed the hungry, 3: Travel the world, 4: Buy a fancy car, 5: Save it in the bank")
+if answer=="1":
+    print("Wow! smart idea! Good luck")
+elif answer=="2":
+    print("You are a rare gem! Very generous! We need people like you! God bless you")
+elif answer=="3":
+    print("Nice! But, do you need 1M Drhs for that? Interesting")
+elif answer=="4":
+    print("I'm sure you will enjoy it, but really 1 Mh Drhs for a car? Why? You can rent it for a month for much less money")
+elif answer=="5":
+    print('You should reconsider! Because money loses value as time passes by. Besides, money is either digits in the bank or a piece of paper')
+num_questions=5
+for i in range(5):
+    index=random.randint(0,num_questions-1)
+    Q=QUESTIONS[index]
+    del QUESTIONS[index]
+    print(Q["question"])
+    Options=Q["options"]
+    print("Option 1:",Options[0])
+    print("Option 2:", Options[1])
+    print("Option 3:", Options[2])
+    print("Option 4:", Options[3])
+    answer=int(input("What is the answer? 1-4"))
+    answer=answer-1
+    if answer==Q["answer"]:
+        print("Well done! You got ",AMOUNTS[index])
     else:
-        print("Sorry ! Wrong answer")
+        print("Sorry. You lost")
+        playsound('disappointed.mp3')
         break
-
+else:
+    print("Congratulations! you won the million dirhmas")
+    playsound('applaud.mp3')
 

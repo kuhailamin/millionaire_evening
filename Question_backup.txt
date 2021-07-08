@@ -1,0 +1,16 @@
+What is the capital of Egypt?,Cairo,Alexandria,Luxor,London,0
+What is the capital of India?,Cairo,Delhi,Luxor,London,1
+What is the capital of the USA?,Cairo,Delhi,Washington,London,2
+What is the capital of the UAE?,Cairo,Delhi,Washington,Abu Dhabi,3
+What is the capital of the Turkey?,Ankara,Delhi,Washington,Abu Dhabi,0
+What is the capital of the Germany?,Ankara,Berlin,Washington,Abu Dhabi,1
+What is the capital of the Australia?,Ankara,Canberra,Washington,Abu Dhabi,1
+What is the capital of the Greece?,Ankara,Canberra,Athens,Abu Dhabi,2
+What is the capital of the Italy?,Ankara,Canberra,Athens,Rome,3
+What is the capital of the Spain?,Madrid,Canberra,Athens,Rome,0
+What is the capital of the Spain?,Madrid,Brasilia,Athens,Rome,1
+What is the capital of the China?,Madrid,Brasilia,Beijing,Rome,2
+What is the capital of the Pakistan?,Madrid,Brasilia,Beijing,Islamabad,3
+What is the capital of the Morocco?,Rabat,Brasilia,Beijing,Islamabad,0
+What is the capital of the Algeria?,Rabat,Algiers,Beijing,Islamabad,1
+What is the capital of the Tunisia?,Rabat,Algiers,Tunis,Islamabad,2

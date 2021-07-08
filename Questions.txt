@@ -1,0 +1,5 @@
+What is the capital of Egypt?,Cairo,Alexandria,Luxor,London,0
+What is the capital of India?,Cairo,Delhi,Luxor,London,1
+What is the capital of the USA?,Cairo,Delhi,Washington,London,2
+What is the capital of the UAE?,Cairo,Delhi,Washington,Abu Dhabi,3
+What is the capital of the Turkey?,Ankara,Delhi,Washington,Abu Dhabi,0
